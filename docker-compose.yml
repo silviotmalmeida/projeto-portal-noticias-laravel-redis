@@ -1,0 +1,24 @@
+version: '3.5'
+
+services:
+
+  #nome do servico
+  portal-noticias-laravel-redis:
+
+    #construido a partir de uma imagem customizada em ./image
+    image: portal-noticias-laravel-redis
+    
+    #nome do conteiner
+    container_name: portal-noticias-laravel-redis
+
+    #pastas compartilhadas
+    volumes:
+      #pasta do codigo fonte da aplicacao
+      - "./app:/root/app"
+
+    #porta a ser exposta
+    ports:
+      - 8080:8080      
+  
+    #artifício para manter o container aberto
+    tty: true
