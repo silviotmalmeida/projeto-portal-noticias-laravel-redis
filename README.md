@@ -16,15 +16,11 @@ O projeto encontra-se dockerizado para facilitar a implantação. As orientaçõ
 
 - Para criar uma massa de dados de teste utiliza-se o comando "sudo ./runSeed.sh";
 
-- Para criar um link simbólico entre o storage local e a pasta pública do app utiliza-se o comando, na pasta raiz do projeto: "php artisan storage:link"
+- Para iniciar o redis utiliza-se o comando "sudo ./runRedis.sh";
 
 - Para iniciar o servidor utiliza-se o comando "sudo ./runServer.sh";
 
-- O sistema estará disponível na URL "0.0.0.0:8080";
-
-- O dados para acesso da Área Restrita são:
-    - Email: user@email.com
-    - Senha: 123456789
+- O sistema estará disponível na URL "0.0.0.0:8080/article";
 
 - Para encerrar a execução utiliza-se o comando "sudo ./stopContainers.sh";
 
@@ -35,15 +31,9 @@ Principais comandos do laravel:
 
 - Para criar um projeto laravel utiliza-se o comando: composer create-project --prefer-dist laravel/laravel nome-do-projeto "versão do laravel"
 
-- Para instalar o JWT-Auth utiliza-se o comando, na pasta raiz do projeto: composer require tymon/jwt-auth "1.0.2". As demais configurações estão descritas na documentação da biblioteca em https://jwt-auth.readthedocs.io/en/develop/laravel-installation/
+- Para instalar o Laravel-Debugbar utiliza-se o comando, na pasta raiz do projeto: composer require barryvdh/laravel-debugbar=3.6.2 --dev
 
-- Para adicionar o laravel ui utiliza-se o comando, na pasta raiz do projeto: composer require laravel/ui:"versão"
-
-- Para utilizar o laravel ui com autenticação web habilitada utiliza-se o comando: php artisan ui "bootstrap ou vue ou react" --auth
-
-- Para atualizar o frontend da seção de autenticação web criada pelo ui utiliza-se o comando: npm install && npm run dev
-
-- Para adicionar o vuex utiliza-se o comando, na pasta raiz do projeto: npm install vuex@"versão"
+- Para instalar o Predis utiliza-se o comando, na pasta raiz do projeto: composer require predis/predis=v1.1.7
 
 - Para criar um controller utiliza-se o comando, na pasta raiz do projeto: php artisan make:controller nome-do-controller-Controller
 

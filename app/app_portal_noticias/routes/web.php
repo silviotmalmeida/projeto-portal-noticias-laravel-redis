@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// criando as rotas para article
+Route::Resource('article', \App\Http\Controllers\ArticleController::class);
